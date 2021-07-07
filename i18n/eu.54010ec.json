@@ -2391,7 +2391,7 @@
     "Unknown device": "Gailu ezezaguna",
     "You need to be using HTTPS to place a screen-sharing call.": "HTTPS erabili behar duzu sekretuak partekatzeko dei bat ezartzeko.",
     "Welcome to Speaklink": "Ongi etorri Element mezularitzara",
-    "Decentralized, encrypted chat &amp; collaboration powered by [matrix]": "Txat eta elkarlan deszentralizatua eta zifratua [matrix] sarean",
+    "Decentralised, encrypted chat &amp; collaboration powered by [matrix]": "Txat eta elkarlan deszentralizatua eta zifratua [matrix] sarean",
     "Unexpected error preparing the app. See console for details.": "Ustekabeko errorea aplikazioa prestatzean. Ikusi xehetasunak kontsolan.",
     "Invalid configuration: no default server specified.": "Konfigurazio baliogabea: Ez da lehenetsitako zerbitzaririk zehaztu.",
     "Invalid configuration: can only specify one of default_server_config, default_server_name, or default_hs_url.": "Konfigurazio baliogabea: default_server_config, default_server_name, edo default_hs_url bat bakarra zehaztu daiteke.",

@@ -754,7 +754,7 @@
     "Welcome to Speaklink": "Velkomin í Element",
     "Unknown device": "Óþekkt tæki",
     "You need to be using HTTPS to place a screen-sharing call.": "Þú verður að nota HTTPS til að hringja samtal með deilingu á skjá.",
-    "Decentralized, encrypted chat &amp; collaboration powered by [matrix]": "Dulritað dreifvinnsluspjall &amp; samstarfstól keyrt með [matrix]",
+    "Decentralised, encrypted chat &amp; collaboration powered by [matrix]": "Dulritað dreifvinnsluspjall &amp; samstarfstól keyrt með [matrix]",
     "Open": "Opna",
     "Unsupported browser": "Óstuddur vafri",
     "Your browser can't run %(brand)s": "Vafri þinn geta ekki keyrt upp %(brand)s",

@@ -680,7 +680,7 @@
     "Unknown device": "Unknown device",
     "You need to be using HTTPS to place a screen-sharing call.": "You need to be using HTTPS to place a screen-sharing call.",
     "Welcome to Speaklink": "Welcome to Speaklink",
-    "Decentralized, encrypted chat &amp; collaboration powered by [matrix]": "Decentralized, encrypted chat &amp; collaboration powered by [matrix]",
+    "Decentralised, encrypted chat &amp; collaboration powered by [matrix]": "Decentralised, encrypted chat &amp; collaboration powered by [matrix]",
     "The message from the parser is: %(message)s": "The message from the parser is: %(message)s",
     "Invalid JSON": "Invalid JSON",
     "Unexpected error preparing the app. See console for details.": "Unexpected error preparing the app. See console for details.",

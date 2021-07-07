@@ -2897,7 +2897,7 @@
     "Unknown device": "מכשיר לא ידוע",
     "You need to be using HTTPS to place a screen-sharing call.": "עליך להשתמש ב HTTPS בכדי לבצע שיחת ווידאו משותפת.",
     "Welcome to Speaklink": "ברוכים הבאים ל Element",
-    "Decentralized, encrypted chat &amp; collaboration powered by [matrix]": "צ'ט מוצפן &amp; ושת\"פ נעשה ע\"י ה [matrix]",
+    "Decentralised, encrypted chat &amp; collaboration powered by [matrix]": "צ'ט מוצפן &amp; ושת\"פ נעשה ע\"י ה [matrix]",
     "Invalid JSON": "JSON לא חוקי",
     "Invalid configuration: can only specify one of default_server_config, default_server_name, or default_hs_url.": "תצורה שגויה: ניתן לציין רק אחד מהבאים, default_server_config, default_server_name, או default_hs_url.",
     "Invalid configuration: no default server specified.": "תצורה שגויה: לא צוין שרת ברירת מחדל.",

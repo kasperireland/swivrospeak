@@ -945,7 +945,7 @@
     "Unknown device": "Άγνωστη συσκευή",
     "You need to be using HTTPS to place a screen-sharing call.": "Απαιτείται η χρήση HTTPS για την πραγματοποίηση κλήσης διαμοιρασμού επιφάνειας εργασίας.",
     "Welcome to Speaklink": "Καλώς ήλθατε στο Element",
-    "Decentralized, encrypted chat &amp; collaboration powered by [matrix]": "Αποκεντρωμένη, κρυπτογραφημένη συνεργασία συνομιλίας χρησιμοποιώντας το [matrix]",
+    "Decentralised, encrypted chat &amp; collaboration powered by [matrix]": "Αποκεντρωμένη, κρυπτογραφημένη συνεργασία συνομιλίας χρησιμοποιώντας το [matrix]",
     "The message from the parser is: %(message)s": "Το μήνυμα από τον αναλυτή είναι: %(message)s",
     "Invalid JSON": "Μη έγκυρο JSON",
     "Unexpected error preparing the app. See console for details.": "Απρόοπτο σφάλμα κατά την προετοιμασία της εφαρμογής. Δείτε το τερματικό για λεπτομέρειες.",

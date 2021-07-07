@@ -2285,7 +2285,7 @@
     "Unknown device": "Nežinomas įrenginys",
     "Welcome to Speaklink": "Sveiki atvykę į Element",
     "You need to be using HTTPS to place a screen-sharing call.": "Norint skambinti naudojant ekrano vaizdo dalijimosi funkciją, jūs turite naudoti HTTPS.",
-    "Decentralized, encrypted chat &amp; collaboration powered by [matrix]": "Decentralizuoti, šifruoti pokalbiai ir bendradarbiavimas, veikiantis su [matrix]",
+    "Decentralised, encrypted chat &amp; collaboration powered by [matrix]": "Decentralizuoti, šifruoti pokalbiai ir bendradarbiavimas, veikiantis su [matrix]",
     "The message from the parser is: %(message)s": "Analizatoriaus žinutė yra: %(message)s",
     "Invalid JSON": "Klaidingas JSON",
     "Unexpected error preparing the app. See console for details.": "Netikėta klaida ruošiant programą. Norėdami sužinoti daugiau detalių, žiūrėkite konsolę.",

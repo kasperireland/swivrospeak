@@ -2609,7 +2609,7 @@
     "Welcome to Speaklink": "Element へようこそ",
     "Unknown device": "不明な端末",
     "You need to be using HTTPS to place a screen-sharing call.": "画面共有通話を行うにはHTTPS通信を使う必要があります。",
-    "Decentralized, encrypted chat &amp; collaboration powered by [matrix]": "[matrix] による、分散型で暗号化された会話とコラボレーション",
+    "Decentralised, encrypted chat &amp; collaboration powered by [matrix]": "[matrix] による、分散型で暗号化された会話とコラボレーション",
     "Unexpected error preparing the app. See console for details.": "アプリケーションの準備中に予期しないエラーが発生しました。詳細はコンソールを参照してください。",
     "Invalid configuration: no default server specified.": "不正な設定です：デフォルトのサーバーが設定されていません。",
     "The message from the parser is: %(message)s": "パーザーのメッセージ: %(message)s",

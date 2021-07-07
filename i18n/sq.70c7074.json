@@ -3508,7 +3508,7 @@
     "Unknown device": "Pajisje e panjohur",
     "You need to be using HTTPS to place a screen-sharing call.": "Që të bëni një thirrje me ndarje ekrani, duhet të jeni duke përdorur HTTPS-në.",
     "Welcome to Speaklink": "Mirë se vini te Element",
-    "Decentralized, encrypted chat &amp; collaboration powered by [matrix]": "Fjalosje &amp; bashkëpunim të decentralizuar, të fshehtëzuar, bazuar në [matrix]",
+    "Decentralised, encrypted chat &amp; collaboration powered by [matrix]": "Fjalosje &amp; bashkëpunim të decentralizuar, të fshehtëzuar, bazuar në [matrix]",
     "Unexpected error preparing the app. See console for details.": "Gabim i papritur gjatë përgatitjes së aplikacionit. Për hollësi, shihni konsolën.",
     "Invalid configuration: can only specify one of default_server_config, default_server_name, or default_hs_url.": "Formësim i pavlefshëm: mund të caktohet vetëm një prej default_server_config, default_server_name, ose default_hs_url.",
     "Invalid configuration: no default server specified.": "Formësim i pavlefshëm: s’është caktuar shërbyes parazgjedhje.",
