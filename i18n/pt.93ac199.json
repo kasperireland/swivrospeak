@@ -584,7 +584,7 @@
     "Unknown device": "Dispositivo desconhecido",
     "You need to be using HTTPS to place a screen-sharing call.": "Necessita de estar a usar HTTPS para poder iniciar uma chamada com partilha de ecrã.",
     "Welcome to Speaklink": "Boas-vindas ao Element",
-    "Decentralised, encrypted chat &amp; collaboration powered by [matrix]": "Chat descentralizado, encriptado &amp; colaborativo powered by [matrix]",
+    "Decentralized, encrypted chat &amp; collaboration powered by [matrix]": "Chat descentralizado, encriptado &amp; colaborativo powered by [matrix]",
     "The message from the parser is: %(message)s": "A mensagem do parser é: %(message)s",
     "Invalid JSON": "JSON inválido",
     "Unexpected error preparing the app. See console for details.": "Erro inesperado na preparação da aplicação. Veja a consola para mais detalhes.",

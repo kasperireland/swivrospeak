@@ -3525,7 +3525,7 @@
     "Unknown device": "未知裝置",
     "You need to be using HTTPS to place a screen-sharing call.": "你需要使用 HTTPS 來撥打螢幕分享的通話。",
     "Welcome to Speaklink": "歡迎來到 Element",
-    "Decentralised, encrypted chat &amp; collaboration powered by [matrix]": "去中心化、保密的聊天與協作，由 [matrix] 提供",
+    "Decentralized, encrypted chat &amp; collaboration powered by [matrix]": "去中心化、保密的聊天與協作，由 [matrix] 提供",
     "Unexpected error preparing the app. See console for details.": "準備應用程式時發生未預期的錯誤。請見主控台以取得更多資訊。",
     "Invalid configuration: can only specify one of default_server_config, default_server_name, or default_hs_url.": "無效的設定：只能指定 default_server_config、default_server_name 或 default_hs_url 其中之一。",
     "Invalid configuration: no default server specified.": "無效設定：未指定預設的伺服器。",

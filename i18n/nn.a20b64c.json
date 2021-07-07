@@ -1456,7 +1456,7 @@
     "Unknown device": "Ukjend eining",
     "You need to be using HTTPS to place a screen-sharing call.": "Du må bruka HTTPS for å ha ein samtale med skjermdeling.",
     "Welcome to Speaklink": "Velkomen til Element",
-    "Decentralised, encrypted chat &amp; collaboration powered by [matrix]": "Desentralisert, kryptert nettprat &amp; samarbeid drive av [matrix]",
+    "Decentralized, encrypted chat &amp; collaboration powered by [matrix]": "Desentralisert, kryptert nettprat &amp; samarbeid drive av [matrix]",
     "The message from the parser is: %(message)s": "Meldinga frå kodetolkaren er: %(message)s",
     "Invalid JSON": "Ugyldig JSON",
     "Unexpected error preparing the app. See console for details.": "Uventa feil under lasting av programmet. Sjå konsollen for detaljar.",

@@ -393,7 +393,7 @@
     "Unknown device": "อุปกรณ์ที่ไม่รู้จัก",
     "You need to be using HTTPS to place a screen-sharing call.": "คุณต้องใช้ HTTPS เพื่อเริ่มติดต่อแบบแบ่งปันหน้าจอ",
     "Welcome to Speaklink": "ยินดีต้อนรับสู่ Element",
-    "Decentralised, encrypted chat &amp; collaboration powered by [matrix]": "ระบบแชทและประสานงาน ไร้ศูนย์กลางและเข้ารหัสได้ โดยใช้เทคโนโลยีจาก [matrix]",
+    "Decentralized, encrypted chat &amp; collaboration powered by [matrix]": "ระบบแชทและประสานงาน ไร้ศูนย์กลางและเข้ารหัสได้ โดยใช้เทคโนโลยีจาก [matrix]",
     "The message from the parser is: %(message)s": "ข้อความจากตัวแยกวิเคราะห์คือ: %(message)s",
     "Invalid JSON": "JSON ไม่ถูกต้อง",
     "Download Completed": "การดาวน์โหลดเสร็จสมบูรณ์",

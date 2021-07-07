@@ -3432,7 +3432,7 @@
     "Unknown device": "未知设备",
     "You need to be using HTTPS to place a screen-sharing call.": "您需要使用 HTTPS 以进行共享屏幕通话。",
     "Welcome to Speaklink": "欢迎来到 Element",
-    "Decentralised, encrypted chat &amp; collaboration powered by [matrix]": "去中心化、加密聊天与协作，由 [matrix] 驱动",
+    "Decentralized, encrypted chat &amp; collaboration powered by [matrix]": "去中心化、加密聊天与协作，由 [matrix] 驱动",
     "The message from the parser is: %(message)s": "语法分析器的信息：%(message)s",
     "Invalid JSON": "无效的 JSON",
     "Unexpected error preparing the app. See console for details.": "软件准备时出错，详细信息请查看控制台。",

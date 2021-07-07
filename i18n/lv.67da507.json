@@ -1694,7 +1694,7 @@
     "Unknown device": "Nezināma ierīce",
     "You need to be using HTTPS to place a screen-sharing call.": "Lai veiktu ekrāna kopīgošanas zvanu, nepieciešams izmantot HTTPS savienojumu.",
     "Welcome to Speaklink": "Esiet laipni gaidīti Element",
-    "Decentralised, encrypted chat &amp; collaboration powered by [matrix]": "Decentralizēta, šifrēta čata &amp; kopdarbošanās sistēma uz [matrix] bāzes",
+    "Decentralized, encrypted chat &amp; collaboration powered by [matrix]": "Decentralizēta, šifrēta čata &amp; kopdarbošanās sistēma uz [matrix] bāzes",
     "Unexpected error preparing the app. See console for details.": "Negaidīta kļūda, sagatavojot lietotni. Sīkāku informāciju skatiet konsolē.",
     "Invalid configuration: can only specify one of default_server_config, default_server_name, or default_hs_url.": "Kļūdaina konfigurācija: var norādīt tikai vienu no parametriem default_server_config, default_server_name, vai default_hs_url.",
     "Invalid configuration: no default server specified.": "Kļūdaina konfigurācija: nav norādīts noklusējuma serveris.",
