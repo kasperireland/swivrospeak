@@ -3521,7 +3521,7 @@
     "Your private messages are normally encrypted, but this room isn't. Usually this is due to an unsupported device or method being used, like email invites. <a>Enable encryption in settings.</a>": "I tuoi messaggi privati normalmente sono cifrati, ma questa stanza non lo è. Di solito ciò è dovuto ad un dispositivo non supportato o dal metodo usato, come gli inviti per email. <a>Attiva la crittografia nelle impostazioni.</a>",
     "Unknown device": "Dispositivo sconosciuto",
     "You need to be using HTTPS to place a screen-sharing call.": "Devi usare HTTPS per effettuare una chiamata con la condivisione dello schermo.",
-    "Welcome to Element": "Benvenuti su Element",
+    "Welcome to Speaklink": "Benvenuti su Element",
     "Decentralised, encrypted chat &amp; collaboration powered by [matrix]": "Chat criptate, decentralizzate e collaborazioni offerte da [matrix]",
     "Unexpected error preparing the app. See console for details.": "Errore inaspettato preparando l'app. Vedi la console per i dettagli.",
     "Invalid configuration: can only specify one of default_server_config, default_server_name, or default_hs_url.": "Configurazione non valida: specificare solo uno di default_server_config, default_server_name, o default_hs_url.",

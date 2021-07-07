@@ -3464,7 +3464,7 @@
     "Your private messages are normally encrypted, but this room isn't. Usually this is due to an unsupported device or method being used, like email invites. <a>Enable encryption in settings.</a>": "Dina privata meddelanden är normalt krypterade, men det här rummet är inte det. Oftast så beror detta på att en enhet eller metod som används ej stöds, som e-postinbjudningar. <a>Aktivera kryptering i inställningarna.</a>",
     "Unknown device": "Okänd enhet",
     "You need to be using HTTPS to place a screen-sharing call.": "Du måste använda HTTPS för att ringa med skärmdelning.",
-    "Welcome to Element": "Välkommen till Element",
+    "Welcome to Speaklink": "Välkommen till Element",
     "Decentralised, encrypted chat &amp; collaboration powered by [matrix]": "Decentraliserad, krypterad chatt &amp; samarbetsplattform baserad på [matrix]",
     "The message from the parser is: %(message)s": "Meddelandet från parsern är: %(message)s",
     "Invalid JSON": "Ogiltig JSON",

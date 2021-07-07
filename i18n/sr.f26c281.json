@@ -1833,7 +1833,7 @@
     "Whether or not you're using the 'breadcrumbs' feature (avatars above the room list)": "Без обзира да ли користите функцију „breadcrumbs“ (аватари изнад листе соба)",
     "Unknown device": "Непознати уређај",
     "You need to be using HTTPS to place a screen-sharing call.": "Морате користити HTTPS да бисте започели позив са дељењем екрана.",
-    "Welcome to Element": "Добродошли у Елемент",
+    "Welcome to Speaklink": "Добродошли у Елемент",
     "Decentralised, encrypted chat &amp; collaboration powered by [matrix]": "Децентрализовано, шифровано ћаскање и сарадња коју покреће [matrix]",
     "Invalid configuration: no default server specified.": "Погрешно подешавање: подразумевани сервер није наведен.",
     "The message from the parser is: %(message)s": "Порука из парсера: %(message)s",

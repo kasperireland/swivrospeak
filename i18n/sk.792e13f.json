@@ -2159,7 +2159,7 @@
     "Call Declined": "Hovor odmietnutý",
     "Unknown device": "Neznáme zariadenie",
     "You need to be using HTTPS to place a screen-sharing call.": "Ak si želáte spustiť zdieľanie obrazovky, musíte byť pripojení cez protokol HTTPS.",
-    "Welcome to Element": "Víta vás Element",
+    "Welcome to Speaklink": "Víta vás Element",
     "Decentralised, encrypted chat &amp; collaboration powered by [matrix]": "Decentralizovaný, šifrovaný chat a spolupráca na platforme [matrix]",
     "The message from the parser is: %(message)s": "Správa z parsera je: %(message)s",
     "Invalid JSON": "Neplatný JSON",

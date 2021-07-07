@@ -679,7 +679,7 @@
     "Message search initialisation failed": "Message search initialization failed",
     "Unknown device": "Unknown device",
     "You need to be using HTTPS to place a screen-sharing call.": "You need to be using HTTPS to place a screen-sharing call.",
-    "Welcome to Element": "Welcome to Element",
+    "Welcome to Speaklink": "Welcome to Speaklink",
     "Decentralised, encrypted chat &amp; collaboration powered by [matrix]": "Decentralised, encrypted chat &amp; collaboration powered by [matrix]",
     "The message from the parser is: %(message)s": "The message from the parser is: %(message)s",
     "Invalid JSON": "Invalid JSON",

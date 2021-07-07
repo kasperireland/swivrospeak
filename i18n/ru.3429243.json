@@ -3336,7 +3336,7 @@
     "User Busy": "Пользователь занят",
     "Unknown device": "Неизвестное устройство",
     "You need to be using HTTPS to place a screen-sharing call.": "Для трансляции рабочего стола требуется использование HTTPS.",
-    "Welcome to Element": "Добро пожаловать в Element",
+    "Welcome to Speaklink": "Добро пожаловать в Element",
     "Decentralised, encrypted chat &amp; collaboration powered by [matrix]": "Децентрализованный, шифрованный чат и совместное рабочее пространство на основе [matrix]",
     "Unexpected error preparing the app. See console for details.": "Неожиданная ошибка при подготовке приложения. Подробности см. в консоли.",
     "Invalid configuration: can only specify one of default_server_config, default_server_name, or default_hs_url.": "Неверная конфигурация: может указывать только один из следующих параметров: default_server_config, default_server_name или default_hs_url.",

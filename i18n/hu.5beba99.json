@@ -3526,7 +3526,7 @@
     "End-to-end encryption isn't enabled": "Végpontok közötti titkosítás nincs engedélyezve",
     "Unknown device": "Ismeretlen eszköz",
     "You need to be using HTTPS to place a screen-sharing call.": "Képernyőmegosztás indításához HTTPS-t kell használnia.",
-    "Welcome to Element": "Üdvözli az Element",
+    "Welcome to Speaklink": "Üdvözli az Element",
     "Decentralised, encrypted chat &amp; collaboration powered by [matrix]": "Decentralizált, titkosított csevegés és kollaboráció [matrix] alapokon",
     "Unexpected error preparing the app. See console for details.": "Váratlan hiba történt az alkalmazás előkészítésénél. A részletekért lásd a konzolt.",
     "Invalid configuration: can only specify one of default_server_config, default_server_name, or default_hs_url.": "Érvénytelen konfiguráció: csak egyet lehet megadni a default_server_config, default_server_name és default_hs_url közül.",

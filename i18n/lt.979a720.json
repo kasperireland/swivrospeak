@@ -2283,7 +2283,7 @@
     "Can't load this message": "Nepavyko įkelti šios žinutės",
     "Submit logs": "Pateikti žurnalus",
     "Unknown device": "Nežinomas įrenginys",
-    "Welcome to Element": "Sveiki atvykę į Element",
+    "Welcome to Speaklink": "Sveiki atvykę į Element",
     "You need to be using HTTPS to place a screen-sharing call.": "Norint skambinti naudojant ekrano vaizdo dalijimosi funkciją, jūs turite naudoti HTTPS.",
     "Decentralised, encrypted chat &amp; collaboration powered by [matrix]": "Decentralizuoti, šifruoti pokalbiai ir bendradarbiavimas, veikiantis su [matrix]",
     "The message from the parser is: %(message)s": "Analizatoriaus žinutė yra: %(message)s",

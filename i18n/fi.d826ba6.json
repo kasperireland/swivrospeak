@@ -3119,7 +3119,7 @@
     "Show options to enable 'Do not disturb' mode": "Näytä asetukset Älä häiritse -tilan ottamiseksi käyttöön",
     "%(deviceId)s from %(ip)s": "%(deviceId)s osoitteesta %(ip)s",
     "Unknown device": "Tuntematon laite",
-    "Welcome to Element": "Tervetuloa Element-sovellukseen",
+    "Welcome to Speaklink": "Tervetuloa Element-sovellukseen",
     "You need to be using HTTPS to place a screen-sharing call.": "Sinun täytyy käyttää HTTPS-yhteyttä, jotta voit jakaa ruudun puhelussa.",
     "Decentralised, encrypted chat &amp; collaboration powered by [matrix]": "Hajautettua ja salattua viestintää Matrix-teknologialla",
     "Unexpected error preparing the app. See console for details.": "Odottamaton virhe sovellusta valmisteltaessa. Katso konsolista lisätietoja.",

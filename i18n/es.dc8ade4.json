@@ -3472,7 +3472,7 @@
     "Nothing pinned, yet": "Nada fijado, todavía",
     "Unknown device": "Dispositivo desconocido",
     "You need to be using HTTPS to place a screen-sharing call.": "Debes usar HTTPS para hacer una llamada con pantalla compartida.",
-    "Welcome to Element": "Te damos la bienvenida a Element",
+    "Welcome to Speaklink": "Te damos la bienvenida a Element",
     "Decentralised, encrypted chat &amp; collaboration powered by [matrix]": "Conversaciones cifradas y descentralizadas. Funciona con [matrix]",
     "Unexpected error preparing the app. See console for details.": "Error inesperado preparando la aplicación. Ver la consola para más detalles.",
     "Invalid configuration: can only specify one of default_server_config, default_server_name, or default_hs_url.": "Configuración errónea: sólo puede especificar uno de default_server_config, default_server_name, o default_hs_url.",

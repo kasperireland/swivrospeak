@@ -3507,7 +3507,7 @@
     "Your private messages are normally encrypted, but this room isn't. Usually this is due to an unsupported device or method being used, like email invites. <a>Enable encryption in settings.</a>": "Mesazhet tuaja private normalisht fshehtëzohen, por kjo dhomë nuk fshehtëzohet. Zakonisht kjo vjen si pasojë e përdorimit të një pajisjeje apo metode të pambuluar, bie fjala, ftesa me email. <a>Aktivizoni fshehtëzimin që nga rregullimet.</a>",
     "Unknown device": "Pajisje e panjohur",
     "You need to be using HTTPS to place a screen-sharing call.": "Që të bëni një thirrje me ndarje ekrani, duhet të jeni duke përdorur HTTPS-në.",
-    "Welcome to Element": "Mirë se vini te Element",
+    "Welcome to Speaklink": "Mirë se vini te Element",
     "Decentralised, encrypted chat &amp; collaboration powered by [matrix]": "Fjalosje &amp; bashkëpunim të decentralizuar, të fshehtëzuar, bazuar në [matrix]",
     "Unexpected error preparing the app. See console for details.": "Gabim i papritur gjatë përgatitjes së aplikacionit. Për hollësi, shihni konsolën.",
     "Invalid configuration: can only specify one of default_server_config, default_server_name, or default_hs_url.": "Formësim i pavlefshëm: mund të caktohet vetëm një prej default_server_config, default_server_name, ose default_hs_url.",
