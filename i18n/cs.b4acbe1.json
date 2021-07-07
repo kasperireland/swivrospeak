@@ -3438,7 +3438,7 @@
     "Welcome to Speaklink": "Vítá vás Element",
     "Unknown device": "Neznámé zařízení",
     "You need to be using HTTPS to place a screen-sharing call.": "Pro uskutečnění hovoru se sdílením obrazovky musíte používat HTTPS.",
-    "Decentralised, encrypted chat &amp; collaboration powered by [matrix]": "Decentralizovaný, šifrovaný chat a spolupráce na platformě [matrix]",
+    "Decentralized, encrypted chat &amp; collaboration powered by [matrix]": "Decentralizovaný, šifrovaný chat a spolupráce na platformě [matrix]",
     "The message from the parser is: %(message)s": "Zpráva z parseru je: %(message)s",
     "Invalid JSON": "Neplatný JSON",
     "Unexpected error preparing the app. See console for details.": "Neočekávaná chyba při přípravě aplikace. Podrobnosti najdete v konzoli.",

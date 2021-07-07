@@ -3121,7 +3121,7 @@
     "Unknown device": "Tuntematon laite",
     "Welcome to Speaklink": "Tervetuloa Element-sovellukseen",
     "You need to be using HTTPS to place a screen-sharing call.": "Sinun täytyy käyttää HTTPS-yhteyttä, jotta voit jakaa ruudun puhelussa.",
-    "Decentralised, encrypted chat &amp; collaboration powered by [matrix]": "Hajautettua ja salattua viestintää Matrix-teknologialla",
+    "Decentralized, encrypted chat &amp; collaboration powered by [matrix]": "Hajautettua ja salattua viestintää Matrix-teknologialla",
     "Unexpected error preparing the app. See console for details.": "Odottamaton virhe sovellusta valmisteltaessa. Katso konsolista lisätietoja.",
     "Invalid configuration: can only specify one of default_server_config, default_server_name, or default_hs_url.": "Virheellinen asetus. Vain yhden seuraavista voi määrittää: default_server_config, default_server_name, tai default_hs_url.",
     "Invalid configuration: no default server specified.": "Virheellinen asetus: oletuspalvelinta ei ole määritetty.",

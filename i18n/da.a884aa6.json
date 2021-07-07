@@ -670,7 +670,7 @@
     "Unknown device": "Ukendt enhed",
     "You need to be using HTTPS to place a screen-sharing call.": "Du skal bruge HTTPS for at lave skærmdelings opkald.",
     "Welcome to Speaklink": "Velkommen til Element",
-    "Decentralised, encrypted chat &amp; collaboration powered by [matrix]": "Decentraliseret, krypteret chat &amp; samarbejde baseret på [matrix]",
+    "Decentralized, encrypted chat &amp; collaboration powered by [matrix]": "Decentraliseret, krypteret chat &amp; samarbejde baseret på [matrix]",
     "The message from the parser is: %(message)s": "Beskeden fra parseren er: %(message)s",
     "Invalid JSON": "Ugyldig JSON",
     "Unexpected error preparing the app. See console for details.": "Uventet fejl ved forberedelse af appen. Se konsollen for detaljer.",

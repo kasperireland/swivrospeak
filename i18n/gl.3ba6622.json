@@ -3534,7 +3534,7 @@
     "Unknown device": "Dispositivo descoñecido",
     "You need to be using HTTPS to place a screen-sharing call.": "Precisa utilizar HTTPS para establecer unha chamada de pantalla compartida.",
     "Welcome to Speaklink": "Benvida/o a Element",
-    "Decentralised, encrypted chat &amp; collaboration powered by [matrix]": "Conversas e colaboración descentralizada e cifrada grazas a [matrix]",
+    "Decentralized, encrypted chat &amp; collaboration powered by [matrix]": "Conversas e colaboración descentralizada e cifrada grazas a [matrix]",
     "The message from the parser is: %(message)s": "A mensaxe desde o intérprete é: %(message)s",
     "Invalid JSON": "JSON non válido",
     "Unexpected error preparing the app. See console for details.": "Fallo non agardado ao preparar a app. Detalles na consola.",

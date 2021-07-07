@@ -3460,7 +3460,7 @@
     "Unknown device": "Nekonata aparato",
     "You need to be using HTTPS to place a screen-sharing call.": "Vi devas uzi HTTPS por ekranvidadi.",
     "Welcome to Speaklink": "Bonvenon al Element",
-    "Decentralised, encrypted chat &amp; collaboration powered by [matrix]": "Malcentra, ĉifrita babilado &amp; kunlaboro povigita per [matrix]",
+    "Decentralized, encrypted chat &amp; collaboration powered by [matrix]": "Malcentra, ĉifrita babilado &amp; kunlaboro povigita per [matrix]",
     "Unexpected error preparing the app. See console for details.": "Neatendita eraro okazis dum la preparado de la aplikaĵo. Rigardu la konzolon por detaloj.",
     "Invalid configuration: can only specify one of default_server_config, default_server_name, or default_hs_url.": "Nevalida agordo: vi povas specifi nur unu elekteblon el « default_server_config », « default_server_name », aŭ « default_hs_url ».",
     "Invalid configuration: no default server specified.": "Nevalida agordo: neniu implicita servilo estas specifita.",
