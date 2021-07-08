@@ -2210,7 +2210,7 @@
     "Server did not return valid authentication information.": "Zerbitzariak ez du baliozko autentifikazio informaziorik itzuli.",
     "There was a problem communicating with the server. Please try again.": "Arazo bat egon da zerbitzariarekin komunikatzeko. Saiatu berriro.",
     "Welcome to %(appName)s": "Ongi etorri %(appName)s-era",
-    "Liberate your communication": "Askatu zure komunikazioa",
+    "Communicate freely, privacy-first.": "Askatu zure komunikazioa",
     "Send a Direct Message": "Bidali mezu zuzena",
     "Explore Public Rooms": "Arakatu gela publikoak",
     "Create a Group Chat": "Sortu talde-txata",

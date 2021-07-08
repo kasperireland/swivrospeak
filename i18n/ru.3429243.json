@@ -2228,7 +2228,7 @@
     "Set a room address to easily share your room with other people.": "Присвойте комнате адрес, чтобы поделиться ею с другими людьми.",
     "You can use the custom server options to sign into other Matrix servers by specifying a different homeserver URL. This allows you to use %(brand)s with an existing Matrix account on a different homeserver.": "Вы можете ввести адрес домашнего сервера вручную, чтобы войти на другой сервер. Таким образом, вы сможете использовать %(brand)s с существующей учётной записью Matrix на другом сервере.",
     "Welcome to %(appName)s": "Добро пожаловать в %(appName)s",
-    "Liberate your communication": "Освободите общение",
+    "Communicate freely, privacy-first.": "Освободите общение",
     "Create a Group Chat": "Создать групповой чат",
     "Security & privacy": "Безопасность и конфиденциальность",
     "All settings": "Все настройки",
