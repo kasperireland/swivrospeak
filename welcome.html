@@ -167,6 +167,7 @@ we don't have an account and should hide them. No account == no guest account ei
 }
 
 </style>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
 <div class="mx_Parent">
     <a href="https://element.io" target="_blank" rel="noopener">
@@ -178,10 +179,10 @@ we don't have an account and should hide them. No account == no guest account ei
     <div class="mx_ButtonGroup">
         <div class="mx_ButtonRow">
             <a href="#/login" class="mx_ButtonParent mx_ButtonSignIn mx_Button_iconSignIn">
-                <div class="mx_ButtonLabel">_t("Sign In")</div>
+                <button class = "btn btn-primary">Sign in</button>
             </a>
             <a href="#/register" class="mx_ButtonParent mx_ButtonCreateAccount mx_Button_iconCreateAccount">
-                <div class="mx_ButtonLabel">_t("Create Account")</div>
+                <button class = "btn btn-success">Sign in</button>
             </a>
         </div>
         <!-- The comments below are meant to be used by Ansible as a quick way
@@ -192,7 +193,7 @@ we don't have an account and should hide them. No account == no guest account ei
         <div class="mx_ButtonRow mx_WelcomePage_guestFunctions">
             <div>
                 <a href="#/directory" class="mx_ButtonParent mx_SecondaryButton mx_Button_iconRoomDirectory">
-                    <div class="mx_ButtonLabel">_t("Explore rooms")</div>
+                <button class = "btn btn-light">Sign in</button>
                 </a>
             </div>
         </div>
