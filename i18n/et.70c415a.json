@@ -1037,7 +1037,7 @@
     "This homeserver does not support communities": "See koduserver ei toeta kogukondade funktsionaalsust",
     "Failed to load %(groupId)s": "%(groupId)s kogukonna laadimine ei õnnestunud",
     "Welcome to %(appName)s": "Tere tulemast suhtlusrakenduse %(appName)s kasutajaks",
-    "Communicate freely, privacy-first.": "Vabasta oma suhtlus",
+    "Liberate your communication": "Vabasta oma suhtlus",
     "Send a Direct Message": "Saada otsesõnum",
     "Are you sure you want to leave the room '%(roomName)s'?": "Kas oled kindel, et soovid lahkuda jututoast „%(roomName)s“?",
     "Unknown error": "Teadmata viga",

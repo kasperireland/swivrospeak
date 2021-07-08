@@ -2210,7 +2210,7 @@
     "Server did not return valid authentication information.": "Il server non ha restituito informazioni di autenticazione valide.",
     "There was a problem communicating with the server. Please try again.": "C'è stato un problema nella comunicazione con il server. Riprova.",
     "Welcome to %(appName)s": "Benvenuti su %(appName)s",
-    "Communicate freely, privacy-first.": "Libera le tue comunicazioni",
+    "Liberate your communication": "Libera le tue comunicazioni",
     "Send a Direct Message": "Invia un messaggio diretto",
     "Explore Public Rooms": "Esplora le stanze pubbliche",
     "Create a Group Chat": "Crea una chat di gruppo",

@@ -2249,7 +2249,7 @@
     "Self-verification request": "Selbstverifikationsanfrage",
     "or another cross-signing capable Matrix client": "oder einen anderen Matrix Client der Cross-signing fähig ist",
     "%(brand)s is securely caching encrypted messages locally for them to appear in search results:": "%(brand)s verwendet einen sicheren Zwischenspeicher für verschlüsselte Nachrichten, damit sie in den Suchergebnissen angezeigt werden:",
-    "Communicate freely, privacy-first.": "Befreie deine Kommunikation",
+    "Liberate your communication": "Befreie deine Kommunikation",
     "Message downloading sleep time(ms)": "Wartezeit zwischen dem Herunterladen von Nachrichten (ms)",
     "Navigate recent messages to edit": "Letzte Nachrichten zur Bearbeitung ansehen",
     "Jump to start/end of the composer": "Zu Anfang/Ende des Textfelds springen",
