@@ -1,0 +1,46 @@
+strong {
+  color: green;
+}
+
+bad {
+  color: red;
+}
+
+small {
+  font-size: 10px;
+}
+
+yellow {
+  color: #d8b700;
+}
+
+mid1 {
+  font-size: 18px;
+  color: green;
+}
+
+mid2 {
+  font-size: 18px;
+  color: red;
+}
+
+ab {
+  border-radius: 20px;
+  border: 2px solid #2cad21;
+  width: 25%;
+  text-align: center;
+}
+
+.gradient {
+  background: rgb(20,240,177);
+  background: linear-gradient(62deg, rgba(20,240,177,1) 0%, rgba(13,189,139,1) 51%);
+}
+
+.box {
+  border: 1px solid;
+  border-color: #0dbd8b;
+  border-radius: 20px;
+  padding: 10px;
+  box-shadow: 5px 10px #0dbd8b;
+}
+
