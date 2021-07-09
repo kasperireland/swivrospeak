@@ -1,0 +1,17 @@
+{
+  "name": "SchildiChat",
+    "description": "A Matrix Client based on Element with a more traditional instant messaging experience",
+    "repository": {
+      "url": "https://github.com/SchildiChat/schildichat-desktop",
+      "license": "Apache License 2.0"
+    },
+    "bugs": {
+      "list": "https://github.com/SchildiChat/schildichat-desktop/issues",
+      "report": "https://github.com/SchildiChat/schildichat-desktop/issues/new/choose"
+    },
+    "keywords": [
+      "chat",
+      "schildichat",
+      "matrix"
+    ]
+}
