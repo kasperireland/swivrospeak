@@ -4781,11 +4781,11 @@ class SessionView extends TemplateView {
 function hydrogenGithubLink(t) {
     if (window.HYDROGEN_VERSION) {
         return t.a({target: "_blank",
-            href: `https://github.com/kasperireland/speaklink`},
-            `Speaklink Mobile (Hydrogen) on Github`);
+            href: `https://speaklink.uk.to/onmobile/notice.html`},
+            `Read important notice for Mobile`);
     } else {
-        return t.a({target: "_blank", href: "https://github.com/vector-im/hydrogen-web"},
-            "Hydrogen on Github");
+        return t.a({target: "_blank", href: "https://speaklink.uk.to/onmobile/notice.html"},
+            "Read important notice for Mobile");
     }
 }
 
