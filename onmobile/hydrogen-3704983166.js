@@ -5127,16 +5127,7 @@ class ServiceWorkerHandler {
             return Promise.resolve();
         }
     }
-    async _proposeUpdate() {
-        if (document.hidden) {
-            return;
-        }
-        const version = await this._sendAndWaitForReply("version", null, this._registration.waiting);
-        if (confirm(`Version ${version.version} (${version.buildHash}) is available. Reload to apply?`)) {
-            await this._sendAndWaitForReply("haltRequests");
-            this._send("skipWaiting", null, this._registration.waiting);
-        }
-    }
+ 
     handleEvent(event) {
         switch (event.type) {
             case "message":
