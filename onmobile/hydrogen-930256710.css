@@ -1,0 +1,757 @@
+/*
+Copyright 2020 Bruno Windels <bruno@windels.cloud>
+Copyright 2020 The Matrix.org Foundation C.I.C.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+*/
+/** from https://gist.github.com/mfornos/9991865 */
+@font-face {
+  font-family: 'emoji';
+  src: local('Apple Color Emoji'),
+       local('Segoe UI Emoji'),
+       local('Segoe UI Symbol'),
+       local('Noto Color Emoji'),
+       local('Twemoji'),
+       local('Twemoji Mozilla'),
+       local('Android Emoji'),
+       local('EmojiSymbols'),
+       local('Symbola');
+
+  /* Emoji unicode blocks */
+  unicode-range: U+1F300-1F5FF, U+1F600-1F64F, U+1F680-1F6FF, U+2600-26FF;
+}
+/*
+Copyright 2020 Bruno Windels <bruno@windels.cloud>
+Copyright 2020 The Matrix.org Foundation C.I.C.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+*/
+html {
+    height: 100%;
+}
+/* unknown element in IE11 that defaults to inline */
+main {
+    display: block;
+}
+@media screen and (min-width: 600px) {
+    .PreSessionScreen {
+        width: 600px;
+        box-sizing: border-box;
+        margin: 0 auto;
+        margin-top: 50px;
+    }
+}
+.room-placeholder {
+    display: flex;
+    flex-direction: row;
+}
+.SessionView {
+    /* this takes into account whether or not the url bar is hidden on mobile
+    (have tested Firefox Android and Safari on iOS),
+    see https://developers.google.com/web/updates/2016/12/url-bar-resizing */
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: auto 1fr;
+    -ms-grid-columns: 300px 1fr;
+        grid-template:
+        "status status" auto
+        "left   middle" 1fr /
+        300px   1fr;
+    min-height: 0;
+    min-width: 0;
+}
+.right-shown{
+    -ms-grid-rows: auto 1fr;
+    -ms-grid-columns: 300px 1fr 300px;
+        grid-template:
+        "status status status" auto
+        "left   middle right" 1fr /
+        300px   1fr 300px;
+}
+/* resize and reposition session view to account for mobile Safari which shifts
+the layout viewport up without resizing it when the keyboard shows */
+.hydrogen.ios .SessionView {
+    height: 100%;
+    height: var(--ios-viewport-height, 100%);
+    top: 0;
+    top: var(--ios-viewport-top, 0);
+}
+/* hide back button in middle section by default */
+.middle .close-middle { display: none; }
+/* mobile layout */
+@media screen and (max-width: 800px) {
+    .SessionView:not(.middle-shown):not(.right-shown) {
+        -ms-grid-rows: auto 1fr;
+        -ms-grid-columns: 1fr;
+            grid-template:
+            "status" auto
+            "left" 1fr /
+            1fr;
+    }
+
+    .SessionView.middle-shown {
+        -ms-grid-rows: auto 1fr;
+        -ms-grid-columns: 1fr;
+            grid-template:
+            "status" auto
+            "middle" 1fr /
+            1fr;
+    }
+
+    .SessionView.right-shown{
+        -ms-grid-rows: auto 1fr;
+        -ms-grid-columns: 1fr;
+            grid-template:
+            "status" auto
+            "right" 1fr /
+            1fr;
+    }
+
+    .SessionView:not(.middle-shown):not(.right-shown) .room-placeholder { display: none; }
+    .SessionView.middle-shown .LeftPanel { display: none; }
+    .SessionView.right-shown .middle, .SessionView.right-shown .LeftPanel { display: none; }
+
+    /* show back button */
+    .middle .close-middle { display: block !important; }
+    /* hide grid button */
+    .LeftPanel .grid { display: none !important; }
+}
+.LeftPanel {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: left;
+    min-width: 0;
+    min-height: 0;
+}
+.right-shown > .LeftPanel {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+}
+.room-placeholder, .middle {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    min-width: 0;
+    grid-area: middle;
+    /* when room view is inside of a grid,
+    grid-area middle won't be found,
+    so set width manually */
+    width: 100%;
+    /* otherwise we don't get scrollbars and the content grows as large as it can */
+    min-height: 0;
+    /* make popups relative to this element so changing the left panel width doesn't affect their position */
+    position: relative;
+}
+.right-shown > .room-placeholder, .right-shown > .middle {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+}
+.middle {
+    display: flex;
+    flex-direction: column;
+}
+.SessionStatusView {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: status;
+}
+.right-shown > .SessionStatusView {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+}
+.lightbox {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    /* Safari requires an explicit height on the container to prevent picture content from collapsing */
+    box-sizing: border-box;
+    height: 100%;
+}
+.RoomView_body {
+    flex: 1 1;
+    min-height: 0;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.RoomView_body .Timeline, .RoomView_body .TimelineLoadingView {
+    flex: 1 0;
+}
+.middle-header {
+    display: flex;
+}
+.RoomGridView {
+    display: -ms-grid;
+    display: grid;
+}
+.RoomGridView.layout3x2 {
+    -ms-grid-rows: 1fr 1fr;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template:
+        "t0  t1  t2" 1fr
+        "t3  t4  t5" 1fr /
+         1fr 1fr 1fr;
+}
+.RoomGridView > .tile0 {-ms-grid-row: 1;-ms-grid-column: 1;grid-area: t0;}
+.RoomGridView > .tile1 {-ms-grid-row: 1;-ms-grid-column: 2;grid-area: t1;}
+.RoomGridView > .tile2 {-ms-grid-row: 1;-ms-grid-column: 3;grid-area: t2;}
+.RoomGridView > .tile3 {-ms-grid-row: 2;-ms-grid-column: 1;grid-area: t3;}
+.RoomGridView > .tile4 {-ms-grid-row: 2;-ms-grid-column: 2;grid-area: t4;}
+.RoomGridView > .tile5 {-ms-grid-row: 2;-ms-grid-column: 3;grid-area: t5;}
+.RoomGridView > div {
+    display: flex;
+    min-width: 0;
+    min-height: 0;
+}
+.RoomGridView > div.focus-ring {
+    z-index: 1;
+    pointer-events: none;
+}
+.menu {
+    position: absolute;
+    z-index: 2;
+}
+.menu .menu-item{
+    box-sizing: border-box;
+    width: 100%;
+}
+.Settings {
+    display: flex;
+    flex-direction: column;
+}
+.SettingsBody {
+    min-height: 0;
+    overflow-y: auto;
+}
+/*
+Copyright 2020 Bruno Windels <bruno@windels.cloud>
+Copyright 2020 The Matrix.org Foundation C.I.C.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+*/
+/** contains styles for everything before the session view, like the session picker, login, load view, ... */
+.SessionPickerView {
+    padding: 0.4em;
+}
+.SessionPickerView ul {
+    list-style: none;
+    padding: 0;
+}
+.SessionPickerView li {
+    margin: 0.4em 0;
+}
+.SessionPickerView .session-info {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+.SessionPickerView .session-info > :not(:first-child) {
+    margin-left: 8px;
+}
+.SessionPickerView li .user-id {
+    flex: 1 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.SessionPickerView li .error {
+    margin: 0 20px;
+}
+.LoginView {
+    padding: 0.4em;
+}
+.SessionLoadStatusView {
+    display: flex;
+}
+.SessionLoadStatusView > :not(:first-child) {
+    margin-left: 12px;
+}
+.SessionLoadStatusView p {
+    flex: 1 1;
+    margin: 0;
+}
+/*
+Copyright 2020 Bruno Windels <bruno@windels.cloud>
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+*/
+.LeftPanel {
+    display: flex;
+    flex-direction: column;
+}
+.LeftPanel .utilities {
+    display: flex;
+}
+.LeftPanel .utilities .FilterField {
+    flex: 1 1;
+    min-width: 0;
+}
+.LeftPanel ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.RoomList {
+    flex: 1 0;
+    overflow-y: auto;
+    -ms-scroll-chaining: none;
+        overscroll-behavior: contain;
+}
+.RoomList > li > a {
+    display: flex;
+    align-items: center;
+}
+.RoomList .description {
+    margin: 0;
+    flex: 1 1;
+    min-width: 0;
+    display: flex;
+}
+.RoomList .description > .name {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    flex: 1 1;
+}
+.RoomDetailsView {
+    -ms-grid-row: 2;
+    -ms-grid-column: 3;
+    grid-area: right;
+    flex-direction: column;
+}
+@media screen and (max-width: 800px) {
+    .SessionView:not(.middle-shown):not(.right-shown) > .LeftPanel {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    }
+
+    .SessionView.middle-shown > .room-placeholder, .SessionView.middle-shown > .middle {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    }
+    .SessionView:not(.middle-shown):not(.right-shown) > .SessionStatusView {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    }
+
+    .SessionView.middle-shown > .SessionStatusView {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    }
+
+    .SessionView.right-shown > .SessionStatusView{
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    }
+
+    .SessionView.right-shown > .RoomDetailsView{
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    }
+}
+.RoomDetailsView_avatar {
+    display: flex;
+}
+.RoomDetailsView_name h2 {
+    text-align: center;
+}
+.RoomDetailsView_row {
+    justify-content: space-between;
+}
+.RoomDetailsView_label, .RoomDetailsView_row, .RoomDetailsView, .EncryptionIconView {
+    display: flex;
+    align-items: center;
+}
+.EncryptionIconView {
+    justify-content: center;
+}
+.RoomDetailsView_buttons {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+/*
+Copyright 2020 Bruno Windels <bruno@windels.cloud>
+Copyright 2020 The Matrix.org Foundation C.I.C.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+*/
+.middle-header {
+    align-items: center;
+}
+.middle-header h2 {
+    flex: 1 1;
+}
+.middle-header button {
+    display: block;
+}
+.middle-header .room-description {
+    flex: 1 1;
+    min-width: 0;
+}
+.RoomHeader .topic {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.RoomHeader .description {
+    flex: 1 1 auto;
+    min-width: 0;
+}
+.middle-header h2 {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin: 0;
+}
+.MessageComposer {
+    display: flex;
+    align-items: center;
+}
+.MessageComposer > input {
+    display: block;
+    flex: 1 1;
+    min-width: 0;
+    box-sizing: border-box;
+}
+.TimelineLoadingView {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.TimelineLoadingView > :not(:first-child) {
+    margin-left: 12px;
+}
+/*
+Copyright 2020 Bruno Windels <bruno@windels.cloud>
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+*/
+.RoomView_body ul {
+    overflow-y: auto;
+    -ms-scroll-chaining: none;
+        overscroll-behavior: contain;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.message-container {
+    flex: 0 1 auto;
+    /* first try break-all, then break-word, which isn't supported everywhere */
+    word-break: break-all;  
+    word-break: break-word;
+}
+.message-container .sender {
+    margin: 5px 0;
+}
+.message-container .media {
+    display: block;
+}
+.message-container .media > img,
+.message-container .media > video {
+    display: block;
+}
+.AnnouncementView {
+    display: flex;
+    align-items: center;
+}
+.GapView {
+    visibility: hidden;
+    display: flex;
+    padding: 10px 20px;
+}
+.GapView.isLoading {
+    visibility: visible;
+}
+.GapView > :nth-child(2) {
+    flex: 1 1;
+}
+/*
+Copyright 2020 Bruno Windels <bruno@windels.cloud>
+Copyright 2020 The Matrix.org Foundation C.I.C.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+*/
+.hydrogen .avatar {
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    font-size: calc(32px * 0.6);
+    overflow: hidden;
+    flex-shrink: 0;
+    -ms-user-select: none;
+        user-select: none;
+    text-align: center;
+    speak: none;
+}
+.hydrogen .avatar img {
+    width: 100%;
+    height: 100%;
+}
+/* work around postcss-css-variables limitations and repeat variable usage */
+.hydrogen .avatar.size-128 {
+    width: 128px;
+    height: 128px;
+    line-height: 128px;
+    font-size: calc(128px * 0.6);
+}
+.hydrogen .avatar.size-64 {
+    width: 64px;
+    height: 64px;
+    line-height: 64px;
+    font-size: calc(64px * 0.6);
+}
+.hydrogen .avatar.size-52 {
+    width: 52px;
+    height: 52px;
+    line-height: 52px;
+    font-size: calc(52px * 0.6);
+}
+.hydrogen .avatar.size-30 {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    font-size: calc(30px * 0.6);
+}
+.hydrogen .avatar.size-24 {
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    font-size: calc(24px * 0.6);
+}
+/*
+Copyright 2020 Bruno Windels <bruno@windels.cloud>
+Copyright 2020 The Matrix.org Foundation C.I.C.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+*/
+@keyframes spinner {
+    0% {
+        transform: rotate(0);
+        stroke-dasharray: 0 0 10 90;
+    }
+    45% {
+        stroke-dasharray: 0 0 90 10;
+    }
+    75% {
+        stroke-dasharray: 0 50 50 0;
+    }
+    100% {
+        transform: rotate(360deg);
+        stroke-dasharray: 10 90 0 0;
+    }
+}
+.hydrogen:not(.legacy) .spinner circle {
+    transform-origin: 50% 50%;
+    animation-name: spinner;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    stroke-dasharray: 0 0 85 85;
+    fill: none;
+    stroke: currentcolor;
+    stroke-width: 12;
+    stroke-linecap: butt;
+}
+.hydrogen.legacy .spinner {
+  display: inline-block;
+  position: relative;
+}
+.hydrogen.legacy .spinner div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  padding: 2px;
+  border: 2px solid currentcolor;
+  border-radius: 50%;
+  animation: legacy-spinner 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: currentcolor transparent transparent transparent;
+  width: 20px;
+  height: 20px;
+}
+.hydrogen.legacy .spinner div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.hydrogen.legacy .spinner div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.hydrogen.legacy .spinner div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes legacy-spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.spinner {
+    width: 20px;
+    height: 20px;
+}
+/*
+Copyright 2020 Bruno Windels <bruno@windels.cloud>
+Copyright 2020 The Matrix.org Foundation C.I.C.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+*/
+.form input {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+.FilterField {
+    display: flex;
+}
+.FilterField input {
+    display: block;
+    flex: 1 1;
+    min-width: 0;
+}
+/*
+Copyright 2020 Bruno Windels <bruno@windels.cloud>
+Copyright 2020 The Matrix.org Foundation C.I.C.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+*/
+.SessionStatusView {
+    display: flex;
+}
+.SessionStatusView p {
+    margin: 0 10px;
+    word-break: break-all;
+    word-break: break-word;
+}
+/* only if the body contains the whole app (e.g. we're not embedded in a page), make some changes */
+body.hydrogen {
+    /* make sure to disable rubber-banding and pull to refresh in a PWA if we'd end up having a scrollbar */
+    -ms-scroll-chaining: none;
+        overscroll-behavior: none;
+    /* disable rubberband scrolling on document in IE11 */
+    overflow: hidden;
+}
+.hydrogen {
+    margin: 0;
+}
+.hiddenWithLayout {
+    visibility: hidden;
+}
+.hidden {
+    display: none !important;
+}
+/* hide clear buttons in IE */
+input::-ms-clear {
+    display: none;
+}
