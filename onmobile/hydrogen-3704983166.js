@@ -4945,7 +4945,7 @@ class SessionPickerView extends TemplateView {
         return t.div({className: "PreSessionScreen"}, [
             t.div({className: "logo"}),
             t.div({className: "SessionPickerView"}, [
-                t.h1(["Continue as …"]),
+                t.h1(["Speaklink Mobile"]),
                 t.view(sessionList),
                 t.div({className: "button-row"}, [
                     t.button({
