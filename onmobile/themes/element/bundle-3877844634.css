@@ -1,0 +1,1621 @@
+/*
+Copyright 2020 Bruno Windels <bruno@windels.cloud>
+Copyright 2020 The Matrix.org Foundation C.I.C.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+*/
+
+@font-face {
+  font-family: 'Inter';
+  font-style:  normal;
+  font-weight: 100;
+  font-display: swap;
+  src: url("inter/Inter-Thin-1469368522.woff2") format("woff2"),
+       url("inter/Inter-Thin-1593561269.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style:  italic;
+  font-weight: 100;
+  font-display: swap;
+  src: url("inter/Inter-ThinItalic-173059207.woff2") format("woff2"),
+       url("inter/Inter-ThinItalic-1888295987.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style:  normal;
+  font-weight: 200;
+  font-display: swap;
+  src: url("inter/Inter-ExtraLight-3116834956.woff2") format("woff2"),
+       url("inter/Inter-ExtraLight-3277895962.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style:  italic;
+  font-weight: 200;
+  font-display: swap;
+  src: url("inter/Inter-ExtraLightItalic-542652406.woff2") format("woff2"),
+       url("inter/Inter-ExtraLightItalic-3022762143.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style:  normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("inter/Inter-Light-3879803958.woff2") format("woff2"),
+       url("inter/Inter-Light-3990448997.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style:  italic;
+  font-weight: 300;
+  font-display: swap;
+  src: url("inter/Inter-LightItalic-1187583345.woff2") format("woff2"),
+       url("inter/Inter-LightItalic-412813693.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style:  normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("inter/Inter-Regular-441590695.woff2") format("woff2"),
+       url("inter/Inter-Regular-2779214592.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style:  italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("inter/Inter-Italic-2832519998.woff2") format("woff2"),
+       url("inter/Inter-Italic-4024721388.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style:  normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("inter/Inter-Medium-1918055220.woff2") format("woff2"),
+       url("inter/Inter-Medium-2285329551.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style:  italic;
+  font-weight: 500;
+  font-display: swap;
+  src: url("inter/Inter-MediumItalic-2244299954.woff2") format("woff2"),
+       url("inter/Inter-MediumItalic-1722521156.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style:  normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("inter/Inter-SemiBold-2507251795.woff2") format("woff2"),
+       url("inter/Inter-SemiBold-1906312195.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style:  italic;
+  font-weight: 600;
+  font-display: swap;
+  src: url("inter/Inter-SemiBoldItalic-152029837.woff2") format("woff2"),
+       url("inter/Inter-SemiBoldItalic-3778207334.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style:  normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("inter/Inter-Bold-1381170295.woff2") format("woff2"),
+       url("inter/Inter-Bold-4187626158.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style:  italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url("inter/Inter-BoldItalic-4000810957.woff2") format("woff2"),
+       url("inter/Inter-BoldItalic-641187949.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style:  normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("inter/Inter-ExtraBold-2973547570.woff2") format("woff2"),
+       url("inter/Inter-ExtraBold-3888913940.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style:  italic;
+  font-weight: 800;
+  font-display: swap;
+  src: url("inter/Inter-ExtraBoldItalic-4023252294.woff2") format("woff2"),
+       url("inter/Inter-ExtraBoldItalic-2880676406.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style:  normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url("inter/Inter-Black-3721205557.woff2") format("woff2"),
+       url("inter/Inter-Black-276207522.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style:  italic;
+  font-weight: 900;
+  font-display: swap;
+  src: url("inter/Inter-BlackItalic-3355577873.woff2") format("woff2"),
+       url("inter/Inter-BlackItalic-3159247813.woff") format("woff");
+}
+
+/*
+Copyright 2020 Bruno Windels <bruno@windels.cloud>
+Copyright 2020 The Matrix.org Foundation C.I.C.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+*/
+
+.Timeline_message {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: auto auto 1fr auto;
+    -ms-grid-columns: 30px 8px 1fr;
+        grid-template:
+        "avatar sender" auto
+        "avatar body" auto
+        "time   body" 1fr
+        "time   reactions" auto /
+         30px   1fr;
+    column-gap: 8px;
+    padding: 4px;
+    margin: 0 12px;
+    /* TODO: check whether this is needed for .media to maintain aspect ratio (on IE11) like the 100% above */
+    /* width: 100%; */
+    box-sizing: border-box;
+}
+
+.Timeline_message:not(.continuation) {
+    margin-top: 4px;
+}
+
+@media screen and (max-width: 800px) {
+    .Timeline_message {
+        -ms-grid-rows: auto 1fr auto auto;
+        -ms-grid-columns: 30px 1fr;
+            grid-template:
+            "avatar    sender" auto
+            "body      body" 1fr
+            "time      time" auto
+            "reactions reactions" auto /
+             30px 1fr;
+    }
+
+    .Timeline_messageSender {
+        margin-top: 0 !important;
+        -ms-grid-row-align: center;
+            align-self: center;
+    }
+}
+
+.Timeline_message:hover, .Timeline_message.selected, .Timeline_message.menuOpen {
+    background-color: rgba(141, 151, 165, 0.1);
+    border-radius: 4px;
+}
+
+.Timeline_message:hover > .Timeline_messageOptions,
+.Timeline_message.menuOpen > .Timeline_messageOptions {
+    display: block;
+    -ms-user-select: none;
+        user-select: none;
+}
+
+.Timeline_messageAvatar {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 1;
+    grid-area: avatar;
+}
+
+.InviteView_roomProfile > .Timeline_messageAvatar {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 1;
+}
+
+.Timeline_messageSender {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+    grid-area: sender;
+    font-weight: bold;
+    line-height: 1.7rem;
+}
+
+.Timeline_messageSender, .Timeline_messageBody {
+    /* reset body margin */
+    margin: 0;
+}
+
+.Timeline_message:not(.continuation) .Timeline_messageSender,
+.Timeline_message:not(.continuation) .Timeline_messageBody {
+    margin-top: 4px;
+}
+
+.Timeline_messageOptions {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 3;
+    display: none;
+    grid-area: body;
+    -ms-grid-row-align: start;
+        align-self: start;
+    -ms-grid-column-align: end;
+        justify-self: end;
+    margin-top: -12px;
+    margin-right: 4px;
+    /* button visuals */
+    border: #ccc 1px solid;
+    height: 24px;
+    width: 24px;
+    background-color: #fff;
+    border-radius: 4px;
+    padding: 0;
+    text-align: center;
+    line-height: 22px;
+    cursor: pointer;
+}
+
+.Timeline_messageTime {
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 1;
+    grid-area: time;
+}
+
+.Timeline_messageBody time {
+    padding: 2px 0 0px 10px;
+    -ms-user-select: none;
+        user-select: none;
+}
+
+.Timeline_messageBody time, .Timeline_messageTime {
+    font-size: 0.8em;
+    line-height: normal;
+    color: #aaa;
+}
+
+.Timeline_messageBody.statusMessage {
+    font-style: italic;
+    color: #777;
+}
+
+.Timeline_messageBody {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 3;
+    grid-area: body;
+    line-height: 2.2rem;
+    /* so the .media can grow horizontally and its spacer can grow vertically */
+    width: 100%;
+    /* Fix for pre overflow */
+    min-width: 0;
+}
+
+.hydrogen .Timeline_messageSender.usercolor1 { color: #368BD6; }
+
+.hydrogen .Timeline_messageSender.usercolor2 { color: #AC3BA8; }
+
+.hydrogen .Timeline_messageSender.usercolor3 { color: #03B381; }
+
+.hydrogen .Timeline_messageSender.usercolor4 { color: #E64F7A; }
+
+.hydrogen .Timeline_messageSender.usercolor5 { color: #FF812D; }
+
+.hydrogen .Timeline_messageSender.usercolor6 { color: #2DC2C5; }
+
+.hydrogen .Timeline_messageSender.usercolor7 { color: #5C56F5; }
+
+.hydrogen .Timeline_messageSender.usercolor8 { color: #74D12C; }
+
+.Timeline_messageBody h1,
+.Timeline_messageBody h2,
+.Timeline_messageBody h3,
+.Timeline_messageBody h4,
+.Timeline_messageBody h5,
+.Timeline_messageBody h6 {
+    font-weight: bold;
+    margin: 0.7em 0;
+}
+
+.Timeline_messageBody h1 { font-size: 1.6em; }
+
+.Timeline_messageBody h2 { font-size: 1.5em; }
+
+.Timeline_messageBody h3 { font-size: 1.4em; }
+
+.Timeline_messageBody h4 { font-size: 1.3em; }
+
+.Timeline_messageBody h5 { font-size: 1.2em; }
+
+.Timeline_messageBody h6 { font-size: 1.1em; }
+
+.Timeline_messageBody a {
+    word-break: break-all;
+}
+
+.Timeline_messageBody a.link {
+    color: #238cf5;
+    text-decoration: none;
+}
+
+.Timeline_messageBody .media {
+    display: -ms-grid;
+    display: grid;
+    margin-top: 4px;
+    width: 100%;
+}
+
+.Timeline_messageBody .media > a {
+    text-decoration: none;
+    width: 100%;
+    display: block;
+}
+
+/* .spacer grows with an inline padding-top to the size of the image,
+so the timeline doesn't jump when the image loads */
+
+.Timeline_messageBody .media > * {
+    -ms-grid-row: 1;
+    grid-row: 1;
+    -ms-grid-column: 1;
+    grid-column: 1;
+}
+
+.Timeline_messageBody .media img, .Timeline_messageBody .media video {
+    width: 100%;
+    height: auto;
+    /* for IE11 to still scale even though the spacer is too tall */
+    -ms-grid-row-align: start;
+        align-self: start;
+    border-radius: 4px;
+    display: block;
+}
+
+/* stretch the image (to the spacer) on platforms
+where we can trust the spacer to always have the correct height,
+otherwise the image starts with  height 0 and with loading=lazy
+only loads when the top comes into view*/
+
+.hydrogen:not(.legacy) .Timeline_messageBody .media img,
+.hydrogen:not(.legacy) .Timeline_messageBody .media video {
+    -ms-grid-row-align: stretch;
+        align-self: stretch;
+}
+
+.Timeline_messageBody .media > .sendStatus {
+    -ms-grid-row-align: end;
+        align-self: end;
+    -ms-grid-column-align: start;
+        justify-self: start;
+    font-size: 0.8em;
+}
+
+.Timeline_messageBody .media > progress {
+    -ms-grid-row-align: center;
+        align-self: center;
+    -ms-grid-column-align: center;
+        justify-self: center;
+    width: 75%;
+}
+
+.Timeline_messageBody .media > time {
+    -ms-grid-row-align: end;
+        align-self: end;
+    -ms-grid-column-align: end;
+        justify-self: end;
+}
+
+.Timeline_messageBody .media > time,
+.Timeline_messageBody .media > .sendStatus {
+    color: #2e2f32;
+    display: block;
+    padding: 2px;
+    margin: 4px;
+    background-color: rgba(255, 255, 255, 0.75);
+    border-radius: 4px;
+}
+
+.Timeline_messageBody .media > .spacer {
+    /* TODO: can we implement this with a pseudo element? or perhaps they are not grid items? */
+    width: 100%;
+    /* don't stretch height as it is a spacer, just in case it doesn't match with image height */
+    -ms-grid-row-align: start;
+        align-self: start;
+}
+
+.Timeline_messageBody code, .Timeline_messageBody pre {
+    background-color: #f8f8f8;
+    font-family: monospace;
+    font-size: 0.9em;
+}
+
+.Timeline_messageBody code {
+    border-radius: 3px;
+    padding: .2em .3em;
+    margin: 0;
+}
+
+.Timeline_messageBody pre {
+    border: 1px solid rgb(229, 229, 229);
+    padding: 0.5em;
+    max-height: 30em;
+    overflow: auto;
+}
+
+.Timeline_messageBody pre > code {
+    background-color: unset;
+    border-radius: unset;
+    display: block;
+    font-size: unset;
+}
+
+.Timeline_messageBody blockquote {
+    margin-left: 0;
+    padding-left: 20px;
+    border-left: 4px solid rgb(229, 229, 229);
+}
+
+.Timeline_messageBody table {
+    border: 1px solid rgb(206, 206, 206);
+    border-radius: 2px;
+    border-spacing: 0;
+}
+
+.Timeline_messageBody thead th {
+    border-bottom: 1px solid rgb(206, 206, 206);
+}
+
+.Timeline_messageBody td, .Timeline_messageBody th {
+    padding: 2px 5px 2px 5px;
+}
+
+.Timeline_messageBody tbody tr:nth-child(2n) {
+    background-color: #f6f6f6;
+}
+
+.Timeline_messageBody .pill {
+    padding: 0px 5px;
+    border-radius: 15px;
+    background-color: #f6f6f6;
+    border: 1px solid rgb(206, 206, 206);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    line-height: 2rem;
+    vertical-align: top;
+    margin: 1px;
+}
+
+.Timeline_messageBody .pill div.avatar {
+    display: inline-block;
+    margin-right: 3px;
+}
+
+.Timeline_message.unsent .Timeline_messageBody {
+    color: #ccc;
+}
+
+.Timeline_message.unverified .Timeline_messageBody {
+    color: #ff4b55;
+}
+
+.Timeline_messageReactions {
+    -ms-grid-row: 4;
+    -ms-grid-column: 3;
+    grid-area: reactions;
+    margin-top: 6px;
+}
+
+.Timeline_messageReactions button {
+    display: inline-flex;
+    line-height: 2.0rem;
+    margin-right: 6px;
+    padding: 1px 6px;
+    border: 1px solid #e9edf1;
+    border-radius: 10px;
+    background-color: #f3f8fd;
+    cursor: pointer;
+    -ms-user-select: none;
+        user-select: none;
+    vertical-align: middle;
+}
+
+.Timeline_messageReactions button.active {
+    background-color: #e9fff9;
+    border-color: #0DBD8B;
+}
+
+@keyframes glow-reaction-border {
+    0% {   border-color: #e9edf1; }
+    100% { border-color: #0DBD8B; }
+}
+
+.Timeline_messageReactions button.active.pending {
+    animation-name: glow-reaction-border;
+    animation-duration: 0.5s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.AnnouncementView {
+    margin: 5px 0;
+    padding: 5px 10%;
+}
+
+.AnnouncementView > div {
+    margin: 0 auto;
+    padding: 10px 20px;
+    background-color: rgba(245, 245, 245, 0.90);
+    text-align: center;
+    border-radius: 10px;
+}
+
+.GapView > :not(:first-child) {
+    margin-left: 12px;
+}
+
+:root {
+    font-size: 10px;
+}
+
+.hydrogen {
+    font-family: 'Inter', sans-serif, 'emoji';
+    background-color: white;
+    color: #2e2f32;
+    font-size: 1.4rem;
+}
+
+.hydrogen button {
+    font-family: inherit;
+}
+
+.avatar {
+    border-radius: 100%;
+    background: #fff;
+    color: white;
+}
+
+.hydrogen .avatar.usercolor1 { background-color: #368BD6; }
+
+.hydrogen .avatar.usercolor2 { background-color: #AC3BA8; }
+
+.hydrogen .avatar.usercolor3 { background-color: #03B381; }
+
+.hydrogen .avatar.usercolor4 { background-color: #E64F7A; }
+
+.hydrogen .avatar.usercolor5 { background-color: #FF812D; }
+
+.hydrogen .avatar.usercolor6 { background-color: #2DC2C5; }
+
+.hydrogen .avatar.usercolor7 { background-color: #5C56F5; }
+
+.hydrogen .avatar.usercolor8 { background-color: #74D12C; }
+
+.logo {
+    height: 48px;
+    min-width: 48px;
+    background-image: url('element-logo-2959259787.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/** buttons */
+
+.button-row {
+    display: flex;
+}
+
+.button-row > * {
+    margin-right: 10px;
+}
+
+.button-row > *:last-child {
+    margin-right: 0px;
+}
+
+.button-row .button-action {
+    margin: 10px 0;
+    flex: 1 0 auto;
+}
+
+.form-row {
+    margin: 12px 0;
+}
+
+.form-row input {
+    padding: 12px;
+    border: 1px solid rgba(141, 151, 165, 0.15);
+    border-radius: 8px;
+    margin-top: 5px;
+    font-size: 1em;
+}
+
+.form-row label, .form-row input {
+    display: block;
+}
+
+.button-action {
+    cursor: pointer;
+}
+
+a.button-action {
+    text-decoration: none;
+    text-align: center;
+    display: block;
+}
+
+.button-action.secondary {
+    color: #03B381;
+}
+
+.button-action.primary {
+    background-color: #03B381;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+}
+
+.button-action.primary:disabled {
+    color: #fffa;
+}
+
+.button-action.primary.destructive {
+    background-color: #FF4B55;
+}
+
+.button-action.secondary.destructive {
+    color: #FF4B55;
+}
+
+.button-action {
+    border: none;
+    padding: 10px;
+    background: none;
+    font-weight: 500;
+}
+
+.button-utility {
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+    background-position: center;
+    background-color: #e1e3e6;
+    background-repeat: no-repeat;
+    border: none;
+    border-radius: 100%;
+    display: block;
+}
+
+.button-utility.grid {
+    background-image: url('icons/enable-grid-3565802253.svg');
+}
+
+.button-utility.settings {
+    background-image: url('icons/settings-3021269543.svg');
+}
+
+.button-utility.grid.on {
+    background-image: url('icons/disable-grid-2157868734.svg');
+}
+
+.FilterField {
+    background-image: url('icons/search-1193336244.svg');
+    background-repeat: no-repeat;
+    background-position: 8px center;
+    background-color: #e1e3e6;
+    /* to prevent jumps when adding a border on focus */
+    border: 1px solid transparent;
+    border-radius: 16px;
+    height: 32px;
+    align-items: center;
+    padding-left: 30px; /* 8 + 14 (icon) + 8*/
+    box-sizing: border-box;
+}
+
+.FilterField:focus-within {
+    border: 1px #e1e3e6 solid;
+    background-color: white;
+}
+
+.FilterField:focus-within button {
+    border-color: white;
+}
+
+/*.FilterField:not(:focus-within) button {
+    display: none;
+}*/
+
+.FilterField input {
+    font-family: "Inter";
+    font-size: 1.3rem;
+    font-weight: 500;
+    line-height: 1.573rem;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    height: 100%;
+}
+
+.FilterField button {
+    width: 30px; /* 32 - 1 (top) - 1 (bottom) */
+    height: 30px; /* 32 - 1 (top) - 1 (bottom) */
+    background-position: center;
+    background-color: #e1e3e6;
+    background-repeat: no-repeat;
+    background-image: url('icons/clear-2843548839.svg');
+    border: 7px solid transparent; /* 8 - 1 */
+    border-radius: 100%;
+    box-sizing: border-box;
+}
+
+.PreSessionScreen {
+    padding: 30px;
+}
+
+.PreSessionScreen h1 {
+    font-size: 16px;
+    text-align: center;
+}
+
+.SessionLoadView {
+    padding-top: 16px;
+}
+
+@media screen and (min-width: 600px) {
+    .PreSessionScreen {
+        box-shadow: 0px 6px 32px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+    }
+}
+
+.PreSessionScreen .logo {
+    height: 48px;
+    min-width: 48px;
+}
+
+.LeftPanel {
+    background: rgba(245, 245, 245, 0.90);
+    font-size: 1.5rem;
+    padding: 12px 8px 0 8px;
+}
+
+.LeftPanel > :not(:first-child) {
+    margin-top: 12px;
+}
+
+.LeftPanel .utilities > :not(:first-child) {
+    margin-left: 8px;
+}
+
+.LeftPanel .filter {
+    border-bottom: 1px solid rgba(245, 245, 245, 0.90);
+}
+
+.LeftPanel .filter input {
+    padding: 0.8em;
+    border: none;
+}
+
+.LeftPanel .RoomList {
+    padding: 0;
+    /* make scrollbar hit right edge of parent */
+    padding-right: 8px;
+    margin-right: -8px;
+}
+
+.RoomList > li {
+    margin: 0;
+    padding: 4px 8px 4px 0;
+    /* vertical align */
+    align-items: center;
+}
+
+.RoomList > li > a {
+    text-decoration: none;
+    /* vertical align */
+    align-items: center;
+}
+
+.RoomList li:not(:first-child) {
+    /* space between items is 12px but we take 4px padding
+    on each side for the background of the active state*/
+    margin-top: 4px;
+}
+
+.RoomList li.active {
+    background: rgba(141, 151, 165, 0.1);
+    border-radius: 5px;
+}
+
+.RoomList li > a > * {
+    margin-right: 8px;
+}
+
+.RoomList .description {
+    align-items: center;
+}
+
+.RoomList .name.unread {
+    font-weight: 600;
+}
+
+.RoomList .badge {
+    min-width: 1.6rem;
+    height: 1.6rem;
+    border-radius: 1.6rem;
+    box-sizing: border-box;
+    padding: 0.1rem 0.3rem;
+    background-color: #61708b;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    line-height: 1.4rem;
+    text-align: center;
+}
+
+.RoomList .badge.highlighted {
+    background-color: #ff4b55;
+}
+
+a {
+    color: inherit;
+}
+
+.SessionStatusView {
+    padding: 4px;
+    min-height: 22px;
+    background-color: #03B381;
+    color: white;
+    align-items: center;
+}
+
+.SessionStatusView button.link {
+    color: currentcolor;
+    text-align: left;
+}
+
+.SessionStatusView > .end {
+    flex: 1 1;
+    display: flex;
+    justify-content: flex-end;
+    -ms-grid-row-align: stretch;
+        align-self: stretch;
+    align-items: stretch;
+}
+
+.SessionStatusView .dismiss {
+    border: none;
+    background: none;
+    background-image: url('icons/dismiss-1031249481.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 32px;
+    cursor: pointer;
+}
+
+.room-placeholder {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.SessionPickerView li {
+  font-size: 1.2em;
+}
+
+.SessionPickerView .session-info {
+    text-decoration: none;
+    padding: 12px;
+    border: 1px solid rgba(141, 151, 165, 0.15);
+    border-radius: 8px;
+    background-image: url('icons/chevron-right-787082136.svg');
+    background-position: center right 30px;
+    background-repeat: no-repeat;
+    font-weight: 500;
+}
+
+.SessionPickerView .session-actions {
+    margin: 10px 0 20px 0;
+    display: flex;
+}
+
+.SessionPickerView .session-actions > * {
+    margin-right: 10px;
+}
+
+.SessionPickerView .session-actions > *:last-child {
+    margin-right: 0px;
+}
+
+.SessionPickerView .session-actions button {
+    border: none;
+    background: none;
+    color: inherit;
+}
+
+.SessionPickerView button.destructive {
+    color: #FF4B55;
+}
+
+.RoomGridView > div.container {
+    border-right: 1px solid rgba(245, 245, 245, 0.90);
+    border-bottom: 1px solid rgba(245, 245, 245, 0.90);
+}
+
+.RoomGridView > .focused > .room-placeholder .unfocused {
+    display: none;
+}
+
+.RoomGridView > :not(.focused) > .room-placeholder .focused {
+    display: none;
+}
+
+.room-placeholder .unfocused {
+    color: #8D99A5;
+}
+
+.RoomGridView > div.focus-ring {
+    border: 2px solid rgba(134, 193, 165, 1);
+    border-radius: 12px;
+}
+
+.middle-header {
+    box-sizing: border-box;
+    flex: 0 0 56px; /* 12 + 32 + 12 to align with filter field + margin */
+    background: white;
+    padding: 0 16px;
+    border-bottom: 1px solid rgba(245, 245, 245, 0.90);
+}
+
+.middle-header h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.middle-header > :not(:last-child) {
+    /* use margin-right because the first item,
+    .close-middle might be hidden and then we don't
+    want a margin-left on the second item*/
+    margin-right: 8px;
+}
+
+.close-middle, .close-session {
+    background-image: url('icons/chevron-left-1539668473.svg');
+    background-position-x: 10px;
+}
+
+.RoomHeader .topic {
+    font-size: 14rem;
+}
+
+.RoomHeader .room-options {
+    background-image: url("icons/vertical-ellipsis-1297943143.svg");
+}
+
+.RoomHeader .room-info {
+    background-image: url("icons/info-2327726143.svg");
+}
+
+.RoomView_error {
+    color: red;
+}
+
+.MessageComposer {
+    border-top: 1px solid rgba(245, 245, 245, 0.90);
+    padding: 8px 16px;
+}
+
+.MessageComposer > :not(:first-child) {
+    margin-left: 12px;
+}
+
+.MessageComposer > input {
+    padding: 0 16px;
+    border: none;
+    border-radius: 24px;
+    background: #F6F6F6;
+    height: 48px;
+    font-size: 14px;
+    font-family: "Inter", sans-serif;
+}
+
+.MessageComposer > button.send {
+    width: 32px;
+    height: 32px;
+    display: block;
+    border-radius: 100%;
+    border: none;
+    text-indent: 200%;
+    overflow: hidden;
+
+    background-color: #03B381;
+    background-image: url('icons/send-4065347741.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.MessageComposer > button.sendFile {
+    width: 32px;
+    height: 32px;
+    display: block;
+    border: none;
+    text-indent: 200%;
+    white-space: nowrap;
+    overflow: hidden;
+    background-color: transparent;
+    background-image: url('icons/paperclip-503625323.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.MessageComposer > button.send:disabled {
+    background-color: #E3E8F0;
+}
+
+.SettingsBody {
+    padding: 0px 16px;
+}
+
+.Settings h3 {
+    margin: 16px 0 8px 0;
+}
+
+.Settings p {
+  max-width: 700px;
+}
+
+.Settings .row .label {
+    font-weight: 600;
+}
+
+.Settings .row .label, .Settings .row .content {
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+.Settings .row .content {
+    margin-left: 4px;
+    flex: 1 1;
+}
+
+.Settings .row.code .content {
+    font-family: monospace;
+}
+
+.Settings .row .content button {
+  display: inline-block;
+  margin: 0 8px;
+}
+
+.Settings .row .content input[type=range] {
+  width: 100%;
+  max-width: 300px;
+  min-width: 160px;
+}
+
+.Settings .row {
+    margin: 4px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.Settings .row .label {
+    flex: 0 0 200px;
+}
+
+.error {
+    color: red;
+    font-weight: 600;
+}
+
+button.link {
+    font-size: 1em;
+    border: none;
+    text-decoration: underline;
+    background: none;
+    cursor: pointer;
+    margin: -12px;
+    padding: 12px;
+}
+
+.Settings a, .Settings .link {
+    color: #03B381;
+    font-weight: 600;
+}
+
+.lightbox {
+    background-color: rgba(0,0,0,0.75);
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: auto 1fr;
+    -ms-grid-columns: 1fr auto;
+        grid-template:
+        "content close"   auto
+        "content details" 1fr /
+        1fr      auto;
+    color: white;
+    padding: 4px;
+}
+
+@media (max-aspect-ratio: 1/1) {
+    .lightbox {
+        -ms-grid-rows: auto 1fr auto;
+        -ms-grid-columns: 1fr;
+            grid-template:
+            "close"   auto
+            "content" 1fr
+            "details" auto /
+            1fr;
+    }
+
+    .lightbox .details {
+        width: 100% !important;
+    }
+}
+
+.lightbox .picture {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 1;
+    grid-area: content;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    -ms-grid-row-align: center;
+        align-self: center;
+    -ms-grid-column-align: center;
+        justify-self: center;
+}
+
+.lightbox .loading {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 1;
+    grid-area: content;
+    -ms-grid-row-align: center;
+        align-self: center;
+    -ms-grid-column-align: center;
+        justify-self: center;
+    display: flex;
+}
+
+.lightbox .loading > :not(:first-child) {
+    margin-left: 8px;
+}
+
+.lightbox .close {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    display: block;
+    grid-area: close;
+    -ms-grid-column-align: end;
+        justify-self: end;
+    background-image: url('icons/dismiss-1031249481.svg');
+    background-position: center;
+    background-size: 16px;
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 16px;
+    padding: 12px;
+}
+
+.lightbox .details {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    grid-area: details;
+    padding: 12px;
+    font-size: 1.5rem;
+    width: 200px;
+}
+
+@media (max-aspect-ratio: 1/1) {
+    .lightbox .picture {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 1;
+    }
+    .lightbox .loading {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 1;
+    }
+    .lightbox .close {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    }
+    .lightbox .details {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    }
+}
+
+.menu {
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    padding: 4px;
+    background-color: white;
+    list-style: none;
+    margin: 0;
+}
+
+.menu li{
+    margin-bottom: 10px;
+}
+
+.menu button {
+    border-radius: 4px;
+    border: none;
+    background-color: transparent;
+    text-align: left;
+    padding: 8px 32px 8px 8px;
+    font-size: 1.5rem;
+    height: 24px;
+    cursor: pointer;
+}
+
+.menu .destructive button {
+    color: #FF4B55;
+}
+
+.menu .quick-reactions {
+    display: flex;
+    padding: 8px 32px 8px 8px;
+}
+
+.menu .quick-reactions button {
+    padding: 2px 4px;
+    text-align: center;
+}
+
+.InviteView_body {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex: 1 1;
+    overflow: auto;
+}
+
+.InviteView_invite {
+    display: flex;
+    width: 100%;
+    max-width: 400px;
+    flex-direction: column;
+    padding: 0 24px;
+}
+
+.InviteView_roomProfile {
+    display: -ms-grid;
+    display: grid;
+    gap: 4px;
+    -ms-grid-rows: auto 4px 1fr;
+    -ms-grid-columns: 72px 4px 1fr;
+        grid-template:
+        "avatar name" auto
+        "avatar description" 1fr /
+        72px 1fr;
+    -ms-grid-row-align: center;
+        align-self: center;
+    margin-bottom: 24px;
+}
+
+.InviteView_roomProfile h3 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+    grid-area: name;
+    margin: 0;
+}
+
+.InviteView_roomDescription {
+    -ms-grid-row: 3;
+    -ms-grid-column: 3;
+    grid-area: description;
+    font-size: 1.2rem;
+    margin: 0;
+    color: #777;
+}
+
+.InviteView_roomAvatar {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 1;
+    grid-area: avatar;
+}
+
+.InviteView_roomProfile > .InviteView_roomAvatar {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 1;
+}
+
+@media screen and (max-width: 800px) {
+    .Timeline_messageAvatar {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 1;
+    }
+    .Timeline_messageSender {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    }
+    .Timeline_messageOptions {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    }
+    .Timeline_messageTime {
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    }
+    .Timeline_messageBody {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    }
+    .Timeline_messageReactions {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    }
+    .InviteView_roomAvatar {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 1;
+    }
+}
+
+.InviteView_dmAvatar {
+    -ms-grid-row-align: center;
+        align-self: center;
+}
+
+.InviteView_inviter {
+    text-align: center;
+    margin: 24px 0px;
+}
+
+.InviteView_inviter .avatar {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 4px;
+}
+
+.InviteView_buttonRow {
+    margin: 10px auto;
+    max-width: 200px;
+    width: 100%;
+}
+
+.InviteView_buttonRow button {
+    display: block;
+    width: 100%;
+}
+
+.RoomArchivedView {
+    padding: 12px;
+    background-color: rgba(245, 245, 245, 0.90);
+}
+
+.RoomArchivedView h3 {
+    margin: 0;
+}
+
+.UnknownRoomView {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 16px;
+    box-sizing: border-box;
+}
+
+.UnknownRoomView h2 {
+    word-break: break-all;
+    word-break: break-word;
+}
+
+.UnknownRoomView button {
+    max-width: 200px;
+    width: 100%;
+}
+
+.LoadingView {
+    height: 100%;
+    width: 100%;
+}
+
+.LoadingView .spinner {
+    margin-right: 5px;
+}
+
+/* Right Panel */
+
+.RightPanelView {
+    background: rgba(245, 245, 245, 0.90);
+}
+
+.RoomDetailsView {
+    padding: 16px;
+    padding-top: 0;
+}
+
+.RoomDetailsView_id {
+    color: #737D8C;
+    font-size: 12px;
+}
+
+.RoomDetailsView_rows{
+    margin-top: 36px;
+    width: 100%;
+}
+
+.RoomDetailsView_name h2 {
+    margin-bottom: 4px;
+    font-size: 1.8rem;
+}
+
+.RoomDetailsView_row {
+    margin-bottom: 20px;
+    font-weight: 500;
+    font-size: 15px;
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+button.RoomDetailsView_row {
+    cursor: pointer;
+}
+
+button.RoomDetailsView_row::after {
+    content: url("icons/chevron-small-1836604385.svg");
+    margin-left: 12px;
+}
+
+.RoomDetailsView_row:not(button)::after{
+    content: " ";
+    width: 19px;
+}
+
+.RoomDetailsView_label::before {
+    padding-right: 16px;
+    height: 24px;
+    width: 20px;
+}
+
+.RoomDetailsView_label {
+    width: 200px;
+}
+
+.RoomDetailsView_value {
+    color: #737D8C;
+    flex: 1 1;
+}
+
+.MemberCount::before {
+    content: url("icons/room-members-1264467001.svg");
+}
+
+.EncryptionStatus::before {
+    content: url("icons/encryption-status-1545385697.svg");
+}
+
+/* Encryption icon next to avatar */
+
+.EncryptionIconView {
+    width: 52px;
+    height: 52px;
+    border-radius: 100%;
+    background: #737D8C;
+    border: 3px solid #F2F5F8;
+    margin-left: -16px;
+}
+
+.EncryptionIconView_encrypted, .EncryptionIconView_unencrypted {
+    height: 24px;
+    width: 24px;
+}
+
+.EncryptionIconView_encrypted {
+    content: url("icons/e2ee-normal-3171101718.svg");
+}
+
+.EncryptionIconView_unencrypted {
+    content: url("icons/e2ee-disabled-2258827676.svg");
+}
+
+.RightPanelView_buttons .button-utility {
+    width: 24px;
+    height: 24px;
+}
+
+.RightPanelView_buttons .close {
+    background-image: url("icons/clear-2843548839.svg");
+}
+
+.RightPanelView_buttons .back {
+    background-image: url("icons/chevron-thin-left-2615419605.svg");
+}
+
+/* Memberlist Panel */
+
+.MemberListView {
+    padding-left: 16px;
+    padding-right: 16px;
+    margin: 0;
+}
+
+.MemberTileView {
+    margin-bottom: 8px;
+}
+
+.MemberTileView .avatar {
+    margin-right: 8px;
+}
+
+.MemberTileView_name {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    flex: 1 1;
+}
+
+.LazyListParent {
+    overflow-y: auto;
+}
