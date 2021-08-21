@@ -3431,7 +3431,7 @@
     "Your private messages are normally encrypted, but this room isn't. Usually this is due to an unsupported device or method being used, like email invites. <a>Enable encryption in settings.</a>": "你的私人信息通常是被加密的，但此聊天室并未加密。一般而言，这可能是因为使用了不受支持的设备或方法，如电子邮件邀请。<a>在设置中启用加密。</a>",
     "Unknown device": "未知设备",
     "You need to be using HTTPS to place a screen-sharing call.": "您需要使用 HTTPS 以进行共享屏幕通话。",
-    "Welcome to Speaklink": "欢迎来到 Element",
+    "Welcome to Swivro Speak": "欢迎来到 Element",
     "Decentralised, encrypted chat &amp; collaboration powered by [matrix]": "去中心化、加密聊天与协作，由 [matrix] 驱动",
     "The message from the parser is: %(message)s": "语法分析器的信息：%(message)s",
     "Invalid JSON": "无效的 JSON",

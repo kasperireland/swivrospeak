@@ -3533,7 +3533,7 @@
     "Your private messages are normally encrypted, but this room isn't. Usually this is due to an unsupported device or method being used, like email invites. <a>Enable encryption in settings.</a>": "As túas mensaxes privadas normalmente están cifradas, pero esta sala non. Habitualmente esto é debido a que se utiliza un dispositivo ou métodos no soportados, como convites por email. <a>Activa o cifrado nos axustes.</a>",
     "Unknown device": "Dispositivo descoñecido",
     "You need to be using HTTPS to place a screen-sharing call.": "Precisa utilizar HTTPS para establecer unha chamada de pantalla compartida.",
-    "Welcome to Speaklink": "Benvida/o a Element",
+    "Welcome to Swivro Speak": "Benvida/o a Element",
     "Decentralised, encrypted chat &amp; collaboration powered by [matrix]": "Conversas e colaboración descentralizada e cifrada grazas a [matrix]",
     "The message from the parser is: %(message)s": "A mensaxe desde o intérprete é: %(message)s",
     "Invalid JSON": "JSON non válido",
