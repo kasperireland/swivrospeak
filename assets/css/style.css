@@ -49,6 +49,7 @@ body {
   background-color: #232323;
 }
 
-.card-header {
+i {
   color: #3ecb9c;
+  background-color: #3ecb9c;
 }
