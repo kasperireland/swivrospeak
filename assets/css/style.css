@@ -32,8 +32,8 @@ ab {
 }
 
 .gradient {
-  background: #353535;
-  background: linear-gradient(62deg, #353535, #353535;
+  background-color: #353535;
+  color:white;
 }
 
 .box {
